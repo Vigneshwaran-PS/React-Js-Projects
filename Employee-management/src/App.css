@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 0;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.container{
+  width: 80vw;
+  height: 90vh;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 50px;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  color: #484848;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.buttons{
+
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons input{
+  width: 50%;
+  font-size: 20px;
+}
+
+.add{
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+}
+
+
+.line{
+  border: none;
+  border-bottom: 2px solid rgb(86, 86, 86);
+}
+
+.emp-header, .employees {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1.5fr 1.5fr; /* Adjust column size as needed */
+  width: 80%;
+  text-align: center;
+}
+
+.employees {
+  overflow-y: scroll;
+  max-height: 80vh; /* Prevents excessive scrolling */
+  background-color: white;
+  color: black;
+}
+
+.employee {
+  display: contents; /* Ensures each row follows the grid layout */
+}
+
+.employee div {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.emp-header {
+  font-weight: bold;
+  padding: 13px;
+  background-color: #2980b9;
+  color: white;
+  border-radius: 10px;
+}
+
+.edit, .delete{
+  font-size: 16px;
+  background-color: #2980b9;
+  border: none;
+  padding: 8px;
+  color: white;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+.overlay-content label {
+  display: block;
+  margin: 10px 0;
+}
+
+.overlay-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.overlay-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.overlay-buttons button {
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay-buttons button:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.overlay-buttons button:last-child {
+  background: #dc3545;
+  color: white;
+}
